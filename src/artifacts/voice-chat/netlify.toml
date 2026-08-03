@@ -1,0 +1,11 @@
+[build]
+  command   = "pnpm --filter @workspace/voice-chat run build"
+  publish   = "artifacts/voice-chat/dist/public"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
